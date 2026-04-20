@@ -1,0 +1,47 @@
+.about-section {
+  padding: 80px 0; /* Add more padding here if you want it taller */
+  background-color: var(--bg-light); /* Uses the very light gray global variable */
+}
+
+.about-container {
+  display: flex;
+  justify-content: center; /* Centers everything internally */
+}
+
+.about-content {
+  max-width: 800px; /* Keeps the text block from becoming too wide to read */
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+/* 
+  ABOUT FEATURES GRID
+  Used to display the '100% Satisfaction', '24/7 Support' list in two columns 
+*/
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* This means '1-fraction 1-fraction' aka 50/50 split */
+  gap: 16px; /* Gap between the columns */
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto; /* Auto margin on left/right centers the grid block */
+}
+
+.about-features li {
+  font-weight: 500;
+  display: flex;
+  align-items: center; /* Ensures the emoji and text align perfectly */
+  gap: 8px; /* Space between the emoji and the text */
+}
+
+/* On mobile screens, shrink the grid from 2 columns down to 1 column */
+@media (max-width: 768px) {
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+}

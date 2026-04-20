@@ -1,0 +1,56 @@
+.services-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+/* 
+  CSS GRID LAYOUT
+  This is how the cards automatically stack neatly beside each other or drop down to a new row!
+  If they ask to change to 2 columns mostly, you could change minmax(300px) to minmax(400px).
+*/
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px; /* Space between cards */
+}
+
+/* Individual card styling */
+.service-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm); /* Subtle shadow normally */
+  border: 1px solid #f3f4f6;
+  text-align: center;
+  transition: var(--transition); /* Used for smooth hover animation */
+}
+
+/* 
+  INTERACTIVE HOVER STATE
+  When mouse hovers, card moves UP, shadow gets BIGGER, and border gets GREEN.
+*/
+.service-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: var(--shadow-lg); 
+  border-color: var(--primary-light); 
+}
+
+/* The styling for the emoji inside the circle on each card */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 15px;
+  background-color: var(--primary-light); /* Light green circle */
+  border-radius: 50%; /* Makes the box a perfect circle */
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-description {
+  color: var(--text-light);
+}

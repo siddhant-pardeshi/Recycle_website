@@ -1,0 +1,52 @@
+.navbar {
+  background-color: var(--white); /* Change to make navbar dark mode etc. */
+  box-shadow: var(--shadow-md);
+  position: sticky; /* Keeps the Navbar attached to top while scrolling */
+  top: 0;
+  z-index: 100; /* Keeps it above other page elements */
+  padding: 16px 0; /* Vertical padding */
+}
+
+.nav-container {
+  display: flex; /* Flexbox puts items side by side */
+  justify-content: space-between; /* Pushes Logo, Links, and Button apart */
+  align-items: center; /* Vertically aligns them in the center */
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px; /* Space between each link */
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+/* Hover color for navigation links */
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* 
+  MOBILE RESPONSIVENESS
+  This block hides the links and button if the screen is narrower than 768px (like on a phone).
+*/
+@media (max-width: 768px) {
+  .nav-links, .nav-btn {
+    display: none;
+  }
+}

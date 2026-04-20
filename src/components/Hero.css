@@ -1,0 +1,39 @@
+.hero-section {
+  padding: 120px 0; /* Creates large spacing above and below the hero text */
+  /* This creates the smooth green background fade */
+  background: linear-gradient(135deg, var(--bg-light) 0%, #e6fcf5 100%);
+  text-align: center; 
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center; /* Centers the content block horizontally */
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 800px; /* Stops the text from stretching too wide on large monitors */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem; /* Primary headline size */
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--text-light); /* Slightly faded text color */
+  margin-bottom: 32px;
+}
+
+/* 
+  MOBILE RESPONSIVENESS
+  Shrinks the massive 3.5rem headline down to 2.5rem on phones to fit the screen.
+*/
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
